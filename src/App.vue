@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <span>hello</span>
+  <v-button type='primary'>登录</v-button>
+  <br>
+  <v-button  size='small' type='warning'>注册</v-button>
+  <br>
+  <v-button disabled type='danger'>删除</v-button>
+   <v-button circle type='warning' >册</v-button>
+  <br>
+  <v-button type='danger' plain>删除</v-button>
+  <v-button disabled>kaishi</v-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "app",
   components: {
-    HelloWorld
+    
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
