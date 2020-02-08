@@ -1,11 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VButton from "./components/button.vue";
-
+import ViviaUI from "../packages";
 
 Vue.config.productionTip = false;
-Vue.component(VButton.name, VButton);
 
+Vue.use(ViviaUI);
 new Vue({
   render: h => h(App)
 }).$mount("#app");

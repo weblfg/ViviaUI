@@ -1,50 +1,61 @@
 <template>
-  <button class="v-button"  :class="[`v-button--${type}`,
-  `v-button--${size}`,{
-    'is-plain':plain,
-    'is-round':round,
-    'is-circle':circle,
-    'is-disabled':disabled
-  }]">
+  <button
+    class="v-button"
+    :class="[
+      `v-button--${type}`,
+      `v-button--${size}`,
+      {
+        'is-plain': plain,
+        'is-round': round,
+        'is-circle': circle,
+        'is-disabled': disabled
+      }
+    ]"
+    @click="handleClick"
+  >
     <span><slot></slot></span>
   </button>
 </template>
 
 <script>
 export default {
-name:'VButton',
-props:{
-  type:{
-    type:String,
-    default:'default'
+  name: "VButton",
+  props: {
+    type: {
+      type: String,
+      default: "default"
+    },
+    plain: {
+      type: Boolean,
+      default: false
+    },
+    round: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      type: String,
+      default: "default"
+    },
+    circle: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
-  plain:{
-    type:Boolean,
-    default:false
-  },
-  round:{
-    type:Boolean,
-    default:false
-  },
-  size:{
-    type:String,
-    default:'default'
-  },
-  circle:{
-    type:Boolean,
-    default:false
-  },
-  disabled:{
-    type:Boolean,
-    default:false
+  methods: {
+    handleClick(e) {
+      this.$emit("click", e);
+    }
   }
-}
-}
+};
 </script>
 
-<style lang='scss' scoped>
-
-.v-button{
+<style lang="scss" scoped>
+.v-button {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -71,19 +82,18 @@ props:{
     border-color: #c6e2ff;
     background-color: #f8ffec;
   }
-
 }
-.v-button--small{
-  padding: 6px 10px ;
-  font-size: 7px ;
-  border-radius: 2px ;
-  line-height: 1 ;
+.v-button--small {
+  padding: 6px 10px;
+  font-size: 7px;
+  border-radius: 2px;
+  line-height: 1;
 }
-.v-button--large{
-  padding: 18px 30px ;
-  font-size: 21px ;
-  border-radius: 6px ;
-  line-height:1 ;
+.v-button--large {
+  padding: 18px 30px;
+  font-size: 21px;
+  border-radius: 6px;
+  line-height: 1;
 }
 .v-button--primary {
   color: #fff;
@@ -216,7 +226,7 @@ props:{
   padding: 12px;
 }
 //disabled
-.v-button.is-disabled{
+.v-button.is-disabled {
   cursor: not-allowed;
 }
 </style>
