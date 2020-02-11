@@ -19,9 +19,9 @@
    * 在main.js中进行引入
 
       ```
-   import ViviaUI from "vivia-ui";
-   import "vivia-ui/dist/vivia-ui.css";
-   Vue.use(ViviaUI);
+       import ViviaUI from "vivia-ui";
+       import "vivia-ui/dist/vivia-ui.css";
+       Vue.use(ViviaUI);
       ```
 
 3.  ### 基础组件(以v-为前缀)
