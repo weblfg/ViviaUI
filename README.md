@@ -5,13 +5,13 @@
    1.1 使用npm
 
    ```
-   npm install vivia-ui -S
+   npm install vivia-ui@0.1.0 -S
    ```
 
    1.2 使用cnpm 
 
    ```
-   cnpm install vivia-ui -S
+   cnpm install vivia-ui@0.1.0 -S
    ```
 
 2. ### 引入
@@ -20,7 +20,7 @@
 
       ```
        import ViviaUI from "vivia-ui";
-       import "vivia-ui/dist/vivia-ui.css";
+       import "vivia-ui/dist/vivid-ui.css";
        Vue.use(ViviaUI);
       ```
 
